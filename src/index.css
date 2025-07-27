@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'CustomFont';
+  src: url('./fonts/kongtext.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  background-color: #ffedd4;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body {
+  margin: 0;
+  font-family: 'CustomFont' !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.badge {
+  background-color: orange !important;
+  padding: 3px;
+  color: white;
+}
+
+.section-title {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.bg-trans {
+  background-color: transparent !important;
+}
+
+.p0 {
+  padding: 5px !important;
+}
+
+    .center {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      background-color: #3498db;
+      border-radius: 50%;
+    }
+
+    .orbiting {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      transform-origin: center;
+    }
+
+    .orbit-1 {
+      background-color: #e74c3c;
+      animation: orbit1 3s linear infinite;
+    }
+
+    .orbit-2 {
+      background-color: #e74c3c;
+      animation: orbit2 4s linear infinite;
+    }
+
+    .orbit-3 {
+      background-color: #000000;
+      animation: verticalOrbit 5s linear infinite;
+    }
+
+    @keyframes orbit1 {
+      0% {
+        transform: rotate(0deg) translateX(60px);
+      }
+      100% {
+        transform: rotate(360deg) translateX(60px);
+      }
+    }
+
+    @keyframes orbit2 {
+      0% {
+        transform: rotate(0deg) translateX(90px);
+      }
+      100% {
+        transform: rotate(360deg) translateX(90px);
+      }
+    }
+
+    @keyframes verticalOrbit {
+      0% {
+        transform: translate(0, -120px);
+      }
+      25% {
+        transform: translate(30px, 0);
+      }
+      50% {
+        transform: translate(0, 120px);
+      }
+      75% {
+        transform: translate(-30px, 0);
+      }
+      100% {
+        transform: translate(0, -120px);
+      }
+    }
